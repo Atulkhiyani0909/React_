@@ -18,7 +18,8 @@ function Accordian() {
     }
 
     const multishow=(getCurrId)=>{
-        const copy=[...multiselect]
+        // copy the original array
+        const copy=[...multiselect] 
         if(multiselect.indexOf(getCurrId)===-1){
             copy.push(getCurrId)
         }else{
@@ -38,7 +39,7 @@ function Accordian() {
                 <div className="title"><h3>{dataitem.question}</h3></div>
                 <span onClick={enablemultiselect ? ()=>multishow(dataitem.id) : ()=> handleSingleSelection(dataitem.id)}>+</span>
                 <div>
-                {enablemultiselect ? multiselect.indexOf(dataitem.id)!=-1 ? <div className="answer">{dataitem.answer}</div> :"" :selected===dataitem.id ? (
+                {enablemultiselect ? multiselect.indexOf(dataitem.id)!=-1 ? <div className="answer">{dataitem.answer}</div> : "" :selected===dataitem.id ? (
                 <div className="answer">{dataitem.answer}</div>
             ): null}
             </div>
