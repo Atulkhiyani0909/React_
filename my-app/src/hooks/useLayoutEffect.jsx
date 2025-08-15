@@ -1,0 +1,1 @@
+// only renders the components before the DOM renders 
