@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import useTheme from '../context/themeToggleProvider'
 
 function BtnToggle() {
-    const {theme,setTheme}=useTheme();
+    const {setTheme}=useTheme();
 
     const onChangeBtn = (e) => {
         const darkModeStatus = e.currentTarget.checked

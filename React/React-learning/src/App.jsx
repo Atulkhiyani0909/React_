@@ -14,6 +14,8 @@ import Profile from './components/profile.jsx'
 import Page from './components/page.jsx'
 import { ToggleProvider } from './context/themeToggleProvider.jsx'
 import BtnToggle from './components/BtnToggle.jsx'
+import Todo from './components/todo/todo.jsx'
+import Redux from './components/redux.jsx'
 
 
 // Best for large scale project
@@ -64,9 +66,12 @@ const router=createBrowserRouter(
     {/* <Password/> */}
     {/* <RouterProvider router={router}/> */}
 
-    <ToggleProvider>
+    {/* <ToggleProvider>
       <Page/>
-    </ToggleProvider>
+    </ToggleProvider> */}
+
+    {/* <Todo/> */}
+    <Redux/>
     </>
   )
 }
