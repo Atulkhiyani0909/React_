@@ -9,6 +9,12 @@ import About from './components/about.jsx'
 import Navbar from './components/navbar.jsx'
 import Contact from './components/contact.jsx'
 import User from './components/user.jsx'
+import Login from './components/login.jsx'
+import Profile from './components/profile.jsx'
+import Page from './components/page.jsx'
+import { ToggleProvider } from './context/themeToggleProvider.jsx'
+import BtnToggle from './components/BtnToggle.jsx'
+
 
 // Best for large scale project
 
@@ -44,6 +50,8 @@ const router=createBrowserRouter(
          </Route>
           <Route  path='contact' element={<Contact/>}></Route>
           <Route path='User/:id' element={<User/>}></Route>
+          <Route path='login' element={<Login/>}></Route>
+           <Route path='profile' element={<Profile/>}></Route>
           <Route path='*' element={<>Not Found</>}></Route>
       </Route>
       // loader in route this helps to load the page data from api before clicking it 
@@ -54,7 +62,11 @@ const router=createBrowserRouter(
     <>
     {/* <Basic/> */}
     {/* <Password/> */}
-    <RouterProvider router={router}/>
+    {/* <RouterProvider router={router}/> */}
+
+    <ToggleProvider>
+      <Page/>
+    </ToggleProvider>
     </>
   )
 }
